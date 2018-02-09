@@ -1,10 +1,15 @@
 import React from 'react';
 
-export default function Loading() {
+import './FirstLoadingAnimation.css';
+
+export default function FirstLoadingAnimation() {
     return (
-        <div>
-            I'm Frist Loading page.
-            Welcome to movie app.
+        <div className='loading-animation'>
+            <div className='loading-animation__text'>
+                <span>Hello</span>
+                <span>Welcome Movie-App</span>
+                <span>Make by Kangji</span>
+            </div>
         </div>
     );
 }

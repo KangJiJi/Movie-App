@@ -1,0 +1,12 @@
+body {
+    background: #EAEAEA;
+}
+
+.movie-list {
+    min-width: 660px;
+    padding:50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size:14px;
+}

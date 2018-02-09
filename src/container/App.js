@@ -13,14 +13,14 @@ class App extends Component {
         // Run changeFirstLoadingState function after few seconds.
         setTimeout(() => {
             this.props.changeFirstLoadingState()
-        }, 2000);
+        }, 3600);
     };
 
     render() {
         if(this.props.isFirstLoading) {
             // Display first loading animation page.
             return (
-                <div>
+                <div className='first-loading-animation'>
                     <FirstLoadingAnimation />
                 </div>
             );

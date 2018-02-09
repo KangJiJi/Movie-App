@@ -1,20 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Dotdotdot from 'react-dotdotdot';
+
+import './Movie.css'
+
 export default function Movie({title, poster, genres, synopsis}) {
     // Display information about one movie.
     return (
-        <div className="Movie">
-            <div className="Movie__Column">
+        <div className='movie'>
+            <div className='movie__col'>
                 <MoviePoster poster={poster} alt={title} />
             </div>
-            <div className="Movie__Column">
+            <div className='movie__col'>
                 <h1>{title}</h1>
-                <div className="Movie__Genres">
+                <div className='movie__genres'>
                     {genres.map((genre, index) => <MovieGenre genre={genre} key={index} />)}
                 </div>
-                <div className="Movie__Synopsis">
-                    {synopsis}
+                <div className='movie__synopsis'>
+                    <Dotdotdot clamp={8}>
+                        {synopsis}
+                    </Dotdotdot>
                 </div>
             </div>
         </div>
@@ -24,14 +30,14 @@ export default function Movie({title, poster, genres, synopsis}) {
 function MoviePoster({poster, alt}) {
     // Display movie poster image.
     return (
-        <img src={poster} alt={alt} title={alt} className="Movie__Poster" />
+        <img src={poster} alt={alt} title={alt} className='movie__poster' />
     );
 }
 
 function MovieGenre({genre}) {
     // Display movie genre list.
     return (
-        <span className="Movie__Genre">{genre}</span>
+        <span className='movie__genre'>{genre}</span>
     );
 }
 

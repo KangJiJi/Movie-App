@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import Movie from './Movie';
 
+import './MovieList.css';
+
 export default class MovieList extends Component {
     componentWillMount() {
         // Bring first movie information.
@@ -23,7 +25,7 @@ export default class MovieList extends Component {
         // To prevent scroll event when page is refreshed.
         if(!this.props.initScrollEvent) {
             // When scroll reaches end, it brings up more movie information. (Infinite scroll)
-            if(!this.props.pending && ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight)) {
+            if(!this.props.pending && ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 200)) {
                 this.props.getMovies(this.props.sort, this.props.page);
             }
         }
@@ -48,7 +50,7 @@ export default class MovieList extends Component {
 
     render() {
         return (
-            <div>
+            <div className='movie-list'>
                 {this._renderMovies()}
             </div>
         );
