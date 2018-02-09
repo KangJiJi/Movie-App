@@ -20,3 +20,5 @@ redux: 3.7.2
 redux-actions: 2.2.1
 
 redux-thunk: 2.2.0
+
+react-dotdotdot
