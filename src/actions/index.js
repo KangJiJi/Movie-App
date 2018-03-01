@@ -24,6 +24,7 @@ export const getMovies = (sort, page) => dispatch => {
         fetch(`https://yts.am/api/v2/list_movies.json?&sort_by=${sort}&page=${page}`)
         .then(response => response.json())
         .then(json => {
+            console.log(json);
             dispatch({
                 type: types.GET_POST_SUCCESS,
                 newMovies: json.data.movies,

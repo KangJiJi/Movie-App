@@ -15,7 +15,8 @@ export default function Movie({title, poster, genres, synopsis}) {
             <div className='movie__col'>
                 <h1>{title}</h1>
                 <div className='movie__genres'>
-                    {genres.map((genre, index) => <MovieGenre genre={genre} key={index} />)}
+                    { /*Exception handling for movies that do not have genres.*/ }
+                    {genres ? genres.map((genre, index) => <MovieGenre genre={genre} key={index} />) : <span />}
                 </div>
                 <div className='movie__synopsis'>
                     <Dotdotdot clamp={8}>
@@ -44,7 +45,6 @@ function MovieGenre({genre}) {
 Movie.propTypes = {
     title: PropTypes.string.isRequired,
     poster: PropTypes.string.isRequired,
-    genres: PropTypes.array.isRequired,
     synopsis: PropTypes.string.isRequired
 }
 
