@@ -25,4 +25,4 @@ react-dotdotdot
 
 # Address
 
-http://GitKangJi.github.io/Movie-App
+https://KangJiJi.github.io/Movie-App
