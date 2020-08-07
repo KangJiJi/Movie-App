@@ -20,7 +20,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "http://GitKangJi.github.io/Movie-App",
+  "homepage": "http://KangJiJi.github.io/Movie-App",
   "devDependencies": {
     "gh-pages": "^1.1.0"
   }
