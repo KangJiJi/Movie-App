@@ -21,7 +21,9 @@ export const getMovies = (sort, page) => (dispatch) => {
   });
   return (
     // Use fetch API for network request.
-    fetch(`/api/v2/list_movies.json?&sort_by=${sort}&page=${page}`)
+    fetch(
+      `https://yts.mx/api/v2/list_movies.json?&sort_by=${sort}&page=${page}`
+    )
       .then((response) => response.json())
       .then((json) => {
         dispatch({
